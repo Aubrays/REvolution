@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(R)Évolution</title>
+    <link rel="stylesheet" href="bootstrap-reboot.min.css">
+    <link href="fonts/fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <al-persodata hidden>
+        <al-perso data-perso-archetype="mister" data-perso-charism="3" data-perso-intimidation="1" data-perso-intelligence="4" data-perso-genre="homme"> 
+            <p class="emphasis"><i class="fas fa-caret-right"></i> un jeune homme discret et compétent.</p>
+            <p>Jeune diplômé, j'ai fait mes preuves depuis mon arrivée il y a deux ans. Plutôt à l'aise dans mes tâches, j'ai su me montrer humble et ainsi gagner le respect de mes collègues et supérieurs malgré mon jeune âge.</p>
+        </al-perso>
+        <al-perso data-perso-archetype="miss" data-perso-charism="5" data-perso-intimidation="0" data-perso-intelligence="3" data-perso-genre="femme"> 
+            <p class="emphasis"><i class="fas fa-caret-right"></i> une jolie trentenaire efficace.</p>
+            <p>Mon charme et mon professionnalisme font des merveilles&nbsp;!</p>
+        </al-perso>
+        <al-perso data-perso-archetype="grincheux" data-perso-charism="2" data-perso-intimidation="4" data-perso-intelligence="2" data-perso-genre="homme"> 
+                <p class="emphasis"><i class="fas fa-caret-right"></i> un arriviste grincheux.</p>
+                <p>Depuis que j'ai été promu à ce poste, ils ne font que râler. Paraît-il que j'aurais pris la place de la charmante et efficace Mademoiselle Durand. Pas de ma faute si mon CV a atterri sur la bonne pile&nbsp;!</p>
+        </al-perso>
+        <al-perso data-perso-archetype="furie" data-perso-charism="0" data-perso-intimidation="5" data-perso-intelligence="3" data-perso-genre="femme"> 
+            <p class="emphasis"><i class="fas fa-caret-right"></i> une furie acariâtre.</p>
+            <p>Déjà que je dois faire leur boulot, ils ont le culot de se plaindre. Une bande d'incompétents, bêtes à manger du foin&nbsp;!</p>
+        </al-perso>
+
+        <al-pnj data-pnj-name="Trish" data-pnj-limitation="mister" data-pnj-passages="" data-pnj-description="Souvenir d'une nuit d'automne">
+                <p>Ah, c'est toi…</p>
+                <p>Et c'est seulement maintenant que tu me rappelles&nbsp;?!</p>
+                <p>Oublie-moi&nbsp;!</p>
+        </al-pnj>
+        <al-pnj data-pnj-name="Louis" data-pnj-limitation="" data-pnj-passages="005" data-pnj-description="Mon chef">
+                <p>Je ne suis pas là pour le moment. Merci de contacter <span class="firstname">FIRSTNAME</span>.</p>
+        </al-pnj>
+    </al-persodata>
+    <al-appdata hidden>
+        <al-app data-app-shortName="telephone" data-app-name="Téléphone" data-app-status="visible" data-app-icon="fas fa-phone">
+            <div id="contactsList">
+                
+            </div>
+        </al-app>
+        <al-app data-app-shortName="appel" data-app-name="Appel" data-app-status="invisible" data-app-icon="fas fa-phone-volume">
+                <h2>Appel en cours</h2>
+                <p class="emphasis"><i class="fas fa-phone-volume"></i></p>
+                <p id="callName">CONTACTNAME</p>
+            </al-app>
+    
+        <al-app data-app-shortName="demineur" data-app-name="Démineur" data-app-status="visible" data-app-icon="fas fa-bomb">
+            <h2>Démineur de l'extrême</h2>
+            <p class="emphasis"><i class="fas fa-fire-alt"><i class="fas fa-fire-alt"></i></i> Boom&nbsp;! <i class="fas fa-fire-alt"></i><i class="fas fa-fire-alt"></i></p>
+            <p>Reviens tenter ta chance plus tard.</p>
+        </al-app>
+        <al-app data-app-shortName="parametres" data-app-name="Paramètres" data-app-status="visible" data-app-icon="fas fa-sliders-h">
+            <ul><li>Changer le fond d'écran</li><li>Supprimer une application</li><li>Quitter le jeu</li></ul>
+        </al-app>
+        <al-app data-app-shortName="message" data-app-name="Messages" data-app-status="visible" data-app-icon="fas fa-comment-alt">
+            <p>On discute&nbsp;?</p>
+        </al-app>
+            
+
+    </al-appdata>
+    <al-storydata hidden>
+
+        <al-passage data-passage-id="000">
+            <p><span class="delay">C'est</span><span class="delayed"> pas</span><span class="delayed"> possible&nbsp;!</span></p>
+            <p class="delayed">Ils ne peuvent pas faire ça&nbsp;!</p>
+            <p class="delayed">Ils n'ont pas le droit de faire ça&nbsp;!</p>
+
+            <button class="btn btn-passage" data-passage-id="001"></button>
+        </al-passage>
+
+        <al-passage data-passage-id="001">
+                <p>Ils avaient fermé ce projet immonde&nbsp;!</p>
+                <p>C'est même moi qui avais envoyé les lettres de licenciements&nbsp;!</p>
+                <p>Mais pourquoi ont-ils continué&nbsp;?!</p>
+
+            <button class="btn btn-passage" data-passage-id="002"></button>
+        </al-passage>
+
+        <al-passage data-passage-id="002">
+            <p>Bon, prenons les choses dans l'ordre.</p>
+
+            <p>Je m'appelle <span id="firstnameArea">
+                <input type="text" name="firstname" id="firstname" placeholder="Nom" value="Camille">
+                <button class="btn btn-submit" onclick="setFirstname()"></button>
+            </span> et je travaille aux ressources humaines de la Multi.</p>
+
+            <div class="step" data-step-position="1">
+                <p>Mes collègues me considèrent comme&nbsp;:</p>
+                <div id="pjArea"><form>
+                    <div>
+                        <input type="radio" name="pj" id="mister" value="mister" checked>
+                        <label for="mister">un jeune homme discret et compétent</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pj" id="miss" value="miss">
+                        <label for="miss">une jolie trentenaire efficace</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pj" id="grincheux" value="grincheux"> 
+                        <label for="grincheux">un arriviste grincheux</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pj" id="furie" value="furie">
+                        <label for="furie">une furie acariâtre</label>
+                    </div>
+                    <button class="btn btn-submit" type="button" onclick="setPerso()"></button>
+                </form></div>
+            </div>
+            <button class="btn btn-passage step" data-step-position="2"  data-passage-id="003"></button>
+        </al-passage>
+
+        <al-passage data-passage-id="003">
+            <p>Il y a un an et demi, j'ai rédigé les lettres de réaffectation des membres du programme (R)Évolution, rattachés au département R&D de la Multi.</p>
+            <p>Je venais de commencer dans la Multi et ne savais pas bien ce que ce programme pouvait être. En même temps, la Multi touche à tout&nbsp;: agroalimentaire, technologies de l'information, électronique, mécanique, biomédical, etc. Et si ce n'est pas estampillé la Multi, alors c'est une de ces filiales.</p>
+            <p>Et là, sous mes yeux, un dossier dit que (R)Évolution existe encore.</p>
+            <button class="btn btn-passage btn-text" data-passage-id="004">Lire le dossier </button>
+            <button class="btn btn-passage btn-text" data-passage-id="005" onclick="displayPhone()">Téléphoner à mon chef </button>
+
+        </al-passage>
+
+        <al-passage data-passage-id="004">
+            <p>Le dossier</p>
+            <button class="btn btn-passage" data-passage-id="004"></button>
+        </al-passage>
+
+        <al-passage data-passage-id="005">
+            <p>Je décide d'appeler Louis.</p>
+            <p class="repauto"></p>
+            <div class="step" data-step-position="1">
+                <p>- Louis, j'écoute.</p>
+                <p>- Bonjour Louis, c'est <span class="firstname">FIRSTNAME</span>.</p>
+            
+
+            <button class="btn btn-passage btn-text" data-passage-id="006">- Comment allez-vous aujourd'hui&nbsp;? </button>
+            <button class="btn btn-passage btn-text" data-passage-id="007" >- (R)Évolution existe encore&nbsp;? </button>
+        </div>
+        </al-passage>
+
+        <al-passage data-passage-id="006">
+            <p class="emphasis">- Comment allez-vous aujourd'hui&nbsp;?</p>
+
+            <div class="carac-test" data-charism="5">
+                <p data-test-result="default">- <span class="firstname">FIRSTNAME</span>, j'espère bien que vous ne me dérangez pas seulement pour prendre de mes nouvelles. Que puis-je pour vous&nbsp;?</p>
+                <p data-test-result="success">- Mais bonjour ma chère <span class="firstname">FIRSTNAME</span>&nbsp;! Je vais bien et vous-même&nbsp;? Que me vaut le plaisir de votre appel&nbsp;?</p>
+            </div>  
+            <button class="btn btn-passage btn-text" data-passage-id="007" >- Le projet (R)Évolution existe-t-il encore&nbsp;? </button>
+            <button class="btn btn-passage btn-text" data-passage-id="008" >- Euh… Puis-je prendre mon après-midi&nbsp;? </button>
+        </al-passage>
+        
+        <al-passage data-passage-id="007">
+            <p class="emphasis">- Le projet (R)Évolution existe-t-il encore&nbsp;?</p>
+        </al-passage>
+        
+        <al-passage data-passage-id="008">
+            <p class="emphasis">- Euh… Puis-je prendre mon après-midi&nbsp;?</p>
+            <p>Je ne me sens pas très bien.</p>
+            <div class="carac-test" data-charism="3">
+                <p data-test-result="default">- Encore une excuse pour ne rien faire&nbsp;! Mais s'il le faut vraiment, je vous libère. Je ne voudrais pas qu'on m'accuse d'inciter au présentéisme.</p>
+                <p data-test-result="success">- Ah&nbsp;? Si votre travail est terminé, vous pouvez rentrer vous reposer.</p>
+            </div>
+
+            <button class="btn btn-passage btn-text" data-passage-id="007" >- Le projet (R)Évolution existe-t-il encore&nbsp;? </button>
+            <button class="btn btn-passage btn-text carac-test" data-passage-id="009" data-intimidation="0">
+                    <span data-test-result="default">Oh merci patron. Belle journée à vous.</span>
+                    <span data-test-result="success">Merci de votre compréhension. Bon après-midi.</span>
+            </button>
+        </al-passage>
+        
+    </al-storydata>
+    <header>
+        <h1><a href="/play.html">(R)Évolution</a></h1>
+        <p>Une fiction interactive</p>
+    </header>
+    <main id="gamePage">
+        <section id="game">
+            <div id="passage"></div>
+        </section>
+        <section id="phone" hidden>
+            <div id="screen">
+                <button class="btn btn-back" id="backBtn" hidden><i class="fas fa-angle-double-left"></i></button>
+                <div class="screen" id="homeScreen"></div>
+                <div class="screen" id="appScreen" hidden></div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p><a href="credits.html">Crédits</a> | Version 0.1</p></footer>
+    <script src="core.js"></script>
+</body>
+</html>

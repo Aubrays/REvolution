@@ -1,0 +1,194 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    color: #D8E2DC;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    font-size: 1.6rem;
+    padding: 0 50px;
+    background: url("img/back.jpg") no-repeat;
+    background-size: cover;
+}
+
+footer{
+    padding: 1.6rem 1.6rem 0;
+}
+
+#creditsPage {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding:5rem;
+}
+
+#creditsPage a{
+    text-decoration: underline;
+}
+
+#gamePage ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#gamePage {
+    display: grid;
+    grid-template-columns: 1fr 357px;
+    grid-gap: 50px;
+
+}
+
+@media (min-width: 1200px){
+    #gamePage {
+        padding: 0 100px;
+        grid-gap: 75px;
+    }
+}
+@media (min-width: 1500px){
+    #gamePage {
+        padding: 0 200px;
+        grid-gap: 100px;
+    }
+}
+
+#game{
+    font-size: 2rem;
+    grid-column: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5rem;
+}
+
+#phone{
+    width: 357px;
+    height: 694px;
+    margin:0;
+    grid-column: 2;
+    background: url("img/smartphone.svg"), url("img/phoneBack.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0px 0px, 25px 75px;
+    background-size: 357px 694px, 304px 540px;
+    color: #D8E2DC;
+}
+#screen {
+    margin-top: 75px;
+    margin-left: 29px;
+    margin-right: 29px;
+    margin-bottom: 88px;
+    width: 300px;
+    height: 533px;
+    padding: 0px 21px;
+}
+
+#homeScreen {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 11px;
+    padding-top:20px;
+
+}
+
+.btn, a {
+    background: none;
+    border:none;
+    color: #D8E2DC;
+    transition: all 0.5s ease;
+    vertical-align: baseline;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover, a:hover {
+    color: #dd4b39;
+    text-shadow: 0 0 15px #dd4b39;
+    transition: all 0.5s ease;
+}
+
+.btn i {
+    font-size: 3.2rem;
+}
+
+.btn-passage {
+    margin-top: 2rem;
+    padding: 0;
+    display:block;
+    text-align: left;
+}
+.btn-passage:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f35a";
+    display: inline-block;
+    padding-left: 3px;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 3.2rem;
+}
+ .btn-passage.btn-text:after {
+    font-size: 1.6rem;
+}
+
+.btn-submit:after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    display: inline-block;
+    padding-left: 3px;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 3.2rem;
+}
+
+.step {
+    display:none;
+}
+
+.emphasis {
+    color: #dd4b39;
+    text-shadow: 0 0 15px #dd4b39;
+}
+
+.btn-app {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 5px solid #D8E2DC;
+    background: none;
+    transition: all 0.5s ease;
+    margin: 0 auto 10px auto;
+}
+
+.btn-app:hover {
+    border: 5px solid #dd4b39;
+    box-shadow: 0 0 15px #dd4b39;
+    transition: all 0.5s ease;
+}
+
+.pnj-phone {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid #D8E2DC;
+    margin-bottom: 1.6rem;
+    padding: 1rem;
+    transition: all 0.5s ease;
+}
+
+.pnj-phone:hover {
+    border: 5px solid #dd4b39;
+    transition: all 0.5s ease;
+    cursor: pointer;
+ }
+.pnj-phone p {
+    margin:0;
+}
+.pnj-phone p:first-child {
+    font-size:2.4rem;
+    color: #dd4b39;
+}
+.pnj-phone p:first-child:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+ }
+ .carac-test p, .carac-test span[data-test-result] {
+    display:none;
+ }
