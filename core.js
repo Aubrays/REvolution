@@ -100,6 +100,7 @@ for(let persoData of persosData){
 }
 
 // Instances of Pnj
+function instancePnjs(){
     let pnjsData = document.getElementsByTagName("al-pnj");
 
     for(let pnjData of pnjsData){
@@ -114,7 +115,7 @@ for(let persoData of persosData){
         let pnj = new Pnj(name, limitation, passages, repauto, description);
         PNJS.push(pnj);
     }
-
+}
 ///////////////////////
 // Interface Elements
 //////////////////////
@@ -166,6 +167,7 @@ function openApp(appName){
     backBtn.addEventListener("click", closeApp);
     homeScreen.hidden = true;
     backBtn.hidden = false;
+    backBtn.style.visibility = "visible";
     appScreen.hidden = false;
 }
 
@@ -189,6 +191,7 @@ function reloadApp(name){
 
 // Phone App
 function loadPhoneApp(){
+    instancePnjs();
     let contactsList = document.getElementById("contactsList");
     for(let pnj of PNJS){
         if(pnj.limitation === PERSO.archetype || pnj.limitation === ""){
@@ -214,14 +217,17 @@ function callContact(){
     let repauto = passageScreen.querySelector(".repauto");
 
     if(pnjObject.passages === ACTUALPASSAGE){
-        repauto.innerHTML = "";
         nextStep();
-        backBtn.hidden = true; // temp -> need button "terminate"
+        backBtn.style.visibility = "hidden"; // temp -> need button "terminate"
     }
     else {
         repauto.innerHTML += pnjObject.repauto;
     }
 }
+
+// function endCallContact(){
+//     openApp(telephone);
+// }
 
 
 ///////////////
@@ -373,7 +379,7 @@ function testCaracteristics(){
     function displayResult(result, arr){
         for(let child of arr.children){
             if(child.dataset.testResult === result){
-                child.style.display = "initial";
+                child.style.display = "block";
             }
         }
     }

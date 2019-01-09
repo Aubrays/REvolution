@@ -110,19 +110,19 @@ footer{
 .btn-passage {
     margin-top: 2rem;
     padding: 0;
-    display:block;
+    display: block;
     text-align: left;
 }
-.btn-passage:after {
+.btn-passage:before {
     font-family: "Font Awesome 5 Free";
     content: "\f35a";
     display: inline-block;
-    padding-left: 3px;
+    padding-right: 3px;
     vertical-align: middle;
     font-weight: 400;
     font-size: 3.2rem;
 }
- .btn-passage.btn-text:after {
+ .btn-passage.btn-text:before {
     font-size: 1.6rem;
 }
 
@@ -192,3 +192,27 @@ footer{
  .carac-test p, .carac-test span[data-test-result] {
     display:none;
  }
+
+ .discussion p {
+    padding-left: 2.7rem;
+ }
+ .discussion p:before {
+    content: "—";
+    padding-right: 1ex;
+    margin-left: -2.7rem;
+ }
+
+ #appel {
+    text-align: center;
+ }
+ #appel .emphasis{
+    font-size: 6.4rem;
+    border-radius: 100%;
+    background: rgba(0,0,0,0.9);
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+}
+#appel #callName {
+    font-size: 3.2rem;
+}
