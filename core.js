@@ -10,6 +10,11 @@ let LOCALHISTORY = 0;
 let PERSO = {};
 let PNJS = [];
 
+// Player variables
+let STRESS = 25;
+let CORRUPTION = 2;
+
+
 //////////////////
 // Classes
 //////////////////

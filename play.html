@@ -171,6 +171,19 @@
         
         <al-passage data-passage-id="007">
             <p class="emphasis">— Le projet (R)Évolution existe-t-il encore&nbsp;?</p>
+            <div class="carac-test" data-intelligence="5">
+                <p data-test-result="default">Louis enchaîne&nbsp;:</p>
+                <p data-test-result="sucess">J'entends Louis reprendre son souffle après un court silence avant que Louis enchaîne&nbsp;:</p>
+            </div>
+            <div class="discussion">
+                <p>En voilà une question&nbsp;! Le projet a été fermé comme nous l'avions annoncé. Il était impensable de continuer à développer une telle technologie de par ses risques, ainsi que par la mauvaise image qu'elle a acquise malgré ses avantages. Vous en souvenez, j'espère&nbsp;!</p>
+                <p>Oui, bien sûr. Je venais de commencer à ce poste quand le scandale a éclaté.</p>
+                <p>Alors pourquoi me posez-vous la question&nbsp;?</p>
+            </div>
+
+            <button class="btn btn-passage btn-text" data-passage-id="010">J'ai sous les yeux un dossier qui dit le contraire.</button>
+            <button class="btn btn-passage btn-text" data-passage-id="011">Je classe seulement mes archives et suis retombé sur les lettres de réaffectation et voulez-vous demander qu'en faire&nbsp;?</button>
+
         </al-passage>
         
         <al-passage data-passage-id="008">
@@ -183,7 +196,7 @@
                 <p data-test-result="success">Ah&nbsp;? Si votre travail est terminé, vous pouvez rentrer vous reposer.</p>
             </div>
 
-            <button class="btn btn-passage btn-text" data-passage-id="007">Le projet (R)Évolution existe-t-il encore&nbsp;? </button>
+            <button class="btn btn-passage btn-text" data-passage-id="007">Le projet (R)Évolution existe-t-il encore&nbsp;?</button>
 
             <!-- Mauvaise méthode pour proposer un texte alternatif -->
             <button class="btn btn-passage btn-text carac-test" data-passage-id="009" data-intimidation="0" onclick="openApp('telephone')"><span data-test-result="default">Oh merci patron. Belle journée à vous.</span><span data-test-result="success">Merci de votre compréhension.<br> Bon après-midi.</span>
@@ -192,6 +205,40 @@
         <al-passage data-passage-id="009">
             <p>Et bien je crois que j'ai une après-midi de libre.</p>
             <div class="repauto"></div>
+        </al-passage>
+
+        <al-passage data-passage-id="010">
+            <p class="emphasis">— J'ai sous les yeux un dossier qui dit le contraire.</p>
+            <p>De l'autre côté, je n'entends plus Louis.</p>
+            <div class="discussion">
+                <p>Louis, vous êtes là&nbsp;</p>
+            </div>
+            <p>Quelques secondes de plus s'écoulent.</p>
+            <div class="discussion">
+                <p>Oui oui, mon téléphone me coupe parfois. Je dois l'envoyer au service technique du fabricant pour réparation.
+                <br>Ah ah ah&nbsp;! 
+                <br>Envoyez-moi Marjorie qu'elle descende au quatrième le déposer.
+                <br>Ah ah ah&nbsp;! La Multi a bien fait d'acheter quelques fabricants. Ça simplifie la vie&nbsp;!
+                <br>Ce sera tout&nbsp;?</p>
+            </div>
+            <button class="btn btn-passage btn-text" data-passage-id="012">Vous n'avez pas répondu à ma question au sujet du dossier.</button>
+            <button class="btn btn-passage btn-text" data-passage-id="013" >Euh… Puis-je prendre mon après-midi&nbsp;? </button>
+        </al-passage>
+
+        <al-passage data-passage-id="013">
+            <div class="discussion">
+                <p><span class="emphasis">Euh… Puis-je prendre mon après-midi&nbsp;?</span><br>
+                Je ne me sens pas très bien.</p>
+                <p>S'il le faut. Attendez le retour de Marjorie avant de partir.</p>
+            </div>
+
+            <!-- Mauvaise méthode pour proposer un texte alternatif -->
+            <div class="carac-test" data-intimidation="0">
+                <button class="btn btn-passage btn-text" data-passage-id="009"  onclick="openApp('telephone')" data-test-result="default">Oh merci patron. Belle journée à vous.</button>
+
+                <button class="btn btn-passage btn-text" data-passage-id="009"  onclick="openApp('telephone')" data-test-result="success">Merci de votre compréhension. Bon après-midi.>
+                </button>
+            </div>
         </al-passage>
         
     </al-storydata>
