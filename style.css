@@ -140,7 +140,7 @@ footer{
     display:none;
 }
 
-.emphasis {
+.emphasis, h2 {
     color: #dd4b39;
     text-shadow: 0 0 15px #dd4b39;
 }
@@ -188,24 +188,24 @@ footer{
     padding-right: 3px;
     vertical-align: middle;
     font-weight: 900;
- }
- .carac-test p, .carac-test span[data-test-result] {
+}
+.carac-test > [data-test-result] {
     display:none;
- }
+}
 
- .discussion p {
+.discussion p {
     padding-left: 2.7rem;
- }
- .discussion p:before {
+}
+.discussion p:before {
     content: "—";
     padding-right: 1ex;
     margin-left: -2.7rem;
- }
+}
 
- #appel {
+#appel {
     text-align: center;
- }
- #appel .emphasis{
+}
+#appel .emphasis{
     font-size: 6.4rem;
     border-radius: 100%;
     background: rgba(0,0,0,0.9);
@@ -215,4 +215,8 @@ footer{
 }
 #appel #callName {
     font-size: 3.2rem;
+}
+.dev-comment {
+    font-style: italic;
+    color: gray;
 }

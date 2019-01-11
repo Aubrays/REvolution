@@ -141,8 +141,10 @@
         </al-passage>
 
         <al-passage data-passage-id="004">
-            <p>Le dossier</p>
-            <button class="btn btn-passage" data-passage-id="004"></button>
+            <h2>Le dossier</h2>
+            <p>Ce dossier de plusieurs pages se</p>
+            
+            <p class="dev-comment">Coming soon.</p>
         </al-passage>
 
         <al-passage data-passage-id="005">
@@ -198,13 +200,17 @@
 
             <button class="btn btn-passage btn-text" data-passage-id="007">Le projet (R)Évolution existe-t-il encore&nbsp;?</button>
 
-            <!-- Mauvaise méthode pour proposer un texte alternatif -->
-            <button class="btn btn-passage btn-text carac-test" data-passage-id="009" data-intimidation="0" onclick="openApp('telephone')"><span data-test-result="default">Oh merci patron. Belle journée à vous.</span><span data-test-result="success">Merci de votre compréhension.<br> Bon après-midi.</span>
-            </button>
+            <div class="carac-test" data-intimidation="0">
+                <button class="btn btn-passage btn-text" data-passage-id="009"  onclick="openApp('telephone')" data-test-result="default">Oh merci patron. Belle journée à vous.</button>
+
+                <button class="btn btn-passage btn-text" data-passage-id="009"  onclick="openApp('telephone')" data-test-result="success">Merci de votre compréhension. Bon après-midi.
+                </button>
+            </div>
         </al-passage>
         <al-passage data-passage-id="009">
             <p>Et bien je crois que j'ai une après-midi de libre.</p>
             <div class="repauto"></div>
+            <p class="dev-comment">Fin de la première partie.</p>
         </al-passage>
 
         <al-passage data-passage-id="010">
@@ -232,11 +238,11 @@
                 <p>S'il le faut. Attendez le retour de Marjorie avant de partir.</p>
             </div>
 
-            <!-- Mauvaise méthode pour proposer un texte alternatif -->
+
             <div class="carac-test" data-intimidation="0">
                 <button class="btn btn-passage btn-text" data-passage-id="009"  onclick="openApp('telephone')" data-test-result="default">Oh merci patron. Belle journée à vous.</button>
 
-                <button class="btn btn-passage btn-text" data-passage-id="009"  onclick="openApp('telephone')" data-test-result="success">Merci de votre compréhension. Bon après-midi.>
+                <button class="btn btn-passage btn-text" data-passage-id="009"  onclick="openApp('telephone')" data-test-result="success">Merci de votre compréhension. Bon après-midi.
                 </button>
             </div>
         </al-passage>
